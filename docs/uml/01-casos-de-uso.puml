@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+actor Estoquista
+actor "Responsável pela produção" as Producao
+actor Gestor
+rectangle MadeiraFlow {
+  usecase "UC01 Manter catálogo" as UC01
+  usecase "UC02 Receber materiais" as UC02
+  usecase "UC03 Acompanhar disponibilidade" as UC03
+  usecase "UC04 Conciliar inventário" as UC04
+  usecase "UC05 Planejar projeto" as UC05
+  usecase "UC06 Reservar materiais" as UC06
+  usecase "UC07 Concluir produção" as UC07
+  usecase "UC08 Cancelar projeto" as UC08
+  usecase "UC09 Rastrear movimentos e auditoria" as UC09
+  usecase "UC10 Planejar reposição" as UC10
+}
+Estoquista -- UC01
+Estoquista -- UC02
+Estoquista -- UC04
+Producao -- UC03
+Producao -- UC05
+Producao -- UC06
+Producao -- UC07
+Producao -- UC08
+Gestor -- UC03
+Gestor -- UC09
+Gestor -- UC10
+@enduml

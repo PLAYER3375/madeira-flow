@@ -1,0 +1,38 @@
+@startuml
+abstract class Material {
+  sku; nome; unidade
+  minimo; alvo
+  fisico; reservado; custo_medio
+  /disponivel
+}
+class Chapa {
+  comprimento; largura; espessura
+  acabamento
+}
+class Insumo {
+  especificacao
+}
+class Projeto {
+  nome; cliente
+  status
+}
+class ItemProjeto {
+  quantidade
+}
+class Movimentacao {
+  instante; tipo; quantidade
+  sku; nome; unidade
+  fisico_apos; reservado_apos
+  custo_unitario; referencia
+}
+Material <|-- Chapa
+Material <|-- Insumo
+Projeto "1" *-- "1..*" ItemProjeto : contém
+ItemProjeto "0..*" --> "1" Material : especifica
+Movimentacao "0..*" --> "1" Material : registra
+Movimentacao "0..*" --> "0..1" Projeto : origina-se
+note bottom of Material
+disponivel = fisico - reservado
+0 <= reservado <= fisico
+end note
+@enduml
