@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+dados/
+dados-demo/
+build/
+dist/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm

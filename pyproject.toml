@@ -1,0 +1,10 @@
+[project]
+name = "madeira-flow"
+version = "1.0.0"
+description = "Estoque e produção de marcenaria — projeto APSOO"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.madeiraflow]
+entrada = "python -m madeiraflow"
+testes = "python scripts/verificar.py"
