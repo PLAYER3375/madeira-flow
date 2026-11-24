@@ -1,0 +1,24 @@
+{
+  "disciplina": "Análise e Projeto de Software Orientado a Objetos",
+  "professor": "Prof. Dr. Vitor Mesaque A. Lima",
+  "integrantes": [
+    {
+      "nome": "Gabriel Gonçalves de Assis Souza",
+      "matricula": "202307430544"
+    },
+    {
+      "nome": "Matheus Mandarini de Menezes",
+      "matricula": "202407430511"
+    },
+    {
+      "nome": "Matheus Henrique dos Santos Gomes",
+      "matricula": "202407430163"
+    },
+    {
+      "nome": "Gabriel Richard Zambianchi de Oliveira",
+      "matricula": "2025.0743.013-0"
+    }
+  ],
+  "turma": "T01",
+  "ano": "2026"
+}
