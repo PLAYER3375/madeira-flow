@@ -1,0 +1,3 @@
+# Somente regeneração de documentos/capturas; aplicação e testes não precisam destes pacotes.
+reportlab==5.1.0
+pillow==13.0.0
