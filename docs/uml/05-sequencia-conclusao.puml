@@ -1,0 +1,50 @@
+@startuml
+actor Producao
+boundary Janela
+control ProjetoService
+control Transacoes
+participant "repositorio: RepositorioEstado" as Repo
+entity EstadoEstoque
+entity Projeto
+entity Material
+participant PublicadorEventos
+participant "observador: ObservadorEstoque" as Observer
+Producao -> Janela: concluir produção e confirmar
+Janela -> ProjetoService: concluir(id)
+ProjetoService -> Transacoes: executar(acao, detalhe, operacao)
+Transacoes -> Repo: carregar()
+Repo --> Transacoes: Snapshot(estado isolado, revisao)
+Transacoes -> ProjetoService: operacao(estado) [função local]
+ProjetoService -> Projeto: concluir() [exige RESERVADO]
+alt projeto RESERVADO
+  Projeto --> ProjetoService: novo projeto CONCLUIDO
+  loop cada item
+    ProjetoService -> Material: consumir_reserva(quantidade)
+    Material --> ProjetoService: nova entidade
+    ProjetoService -> EstadoEstoque: guardar_material(material)
+    note right: registrar movimento CONSUMO
+  end
+  ProjetoService -> EstadoEstoque: guardar_projeto(novo)
+  ProjetoService --> Transacoes: operação concluída localmente
+  Transacoes -> PublicadorEventos: publicar(evento, estado)
+  loop observadores inscritos
+    PublicadorEventos -> Observer: atualizar(evento, estado)
+  end
+  Transacoes -> EstadoEstoque: validar()
+  Transacoes -> Repo: salvar(estado, revisao)
+  note right: UPDATE por revisão e COMMIT
+  Transacoes --> ProjetoService: sucesso após commit
+  ProjetoService --> Janela: sucesso
+  Janela --> Producao: saldos e estado atualizados
+else estado diferente de RESERVADO
+  Projeto --> ProjetoService: RegraNegocio
+  ProjetoService --> Transacoes: RegraNegocio
+  Transacoes --> ProjetoService: erro; sem salvar
+  ProjetoService --> Janela: erro
+  Janela --> Producao: mensagem; nenhuma baixa adicional
+end
+note over Transacoes,Repo
+Físico e reservado diminuem juntos; disponível é preservado.
+Falha em qualquer colaboração impede commit parcial.
+end note
+@enduml

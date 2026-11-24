@@ -1,0 +1,52 @@
+@startuml
+actor Producao
+boundary Janela
+control ProjetoService
+control Transacoes
+participant "repositorio: RepositorioEstado" as Repo
+entity EstadoEstoque
+entity Projeto
+entity Material
+participant PublicadorEventos
+participant "observador: ObservadorEstoque" as Observer
+Producao -> Janela: reservar e confirmar
+Janela -> ProjetoService: reservar(id)
+ProjetoService -> Transacoes: executar(acao, detalhe, operacao)
+Transacoes -> Repo: carregar()
+Repo --> Transacoes: Snapshot(estado isolado, revisao)
+Transacoes -> ProjetoService: operacao(estado) [função local]
+ProjetoService -> Projeto: exigir_planejado()
+loop TODOS os itens antes de alterar
+  ProjetoService -> Material: validar_reserva(quantidade)
+end
+alt todos disponíveis e estado permitido
+  loop cada item
+    ProjetoService -> Material: reservar(quantidade)
+    Material --> ProjetoService: nova entidade
+    ProjetoService -> EstadoEstoque: guardar_material(material)
+    note right: registrar movimento RESERVA
+  end
+  ProjetoService -> Projeto: reservar()
+  Projeto --> ProjetoService: novo projeto RESERVADO
+  ProjetoService -> EstadoEstoque: guardar_projeto(projeto)
+  ProjetoService --> Transacoes: operação concluída localmente
+  Transacoes -> PublicadorEventos: publicar(evento, estado)
+  loop observadores inscritos
+    PublicadorEventos -> Observer: atualizar(evento, estado)
+  end
+  Transacoes -> EstadoEstoque: validar()
+  Transacoes -> Repo: salvar(estado, revisao)
+  note right: UPDATE por revisão e COMMIT
+  Transacoes --> ProjetoService: sucesso após commit
+  ProjetoService --> Janela: sucesso
+  Janela --> Producao: saldos e estado atualizados
+else falta de material ou estado proibido
+  ProjetoService --> Transacoes: RegraNegocio
+  Transacoes --> ProjetoService: erro; sem salvar
+  ProjetoService --> Janela: erro
+  Janela --> Producao: mensagem; estado anterior preservado
+end
+note over Transacoes,Repo
+Falha de observer/escrita/conflito também impede confirmação.
+end note
+@enduml

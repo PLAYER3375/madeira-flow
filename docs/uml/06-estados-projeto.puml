@@ -1,0 +1,14 @@
+@startuml
+[*] --> PLANEJADO : criar
+PLANEJADO --> PLANEJADO : editar [itens válidos]
+PLANEJADO --> RESERVADO : reservar [todos disponíveis]
+PLANEJADO --> CANCELADO : cancelar
+RESERVADO --> CONCLUIDO : concluir [consumir reserva]
+RESERVADO --> CANCELADO : cancelar [liberar reserva]
+CONCLUIDO --> [*]
+CANCELADO --> [*]
+note right of RESERVADO
+Sem edição e sem segunda reserva.
+Contagem física nunca abaixo do reservado.
+end note
+@enduml

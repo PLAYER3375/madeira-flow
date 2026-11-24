@@ -1,0 +1,85 @@
+@startuml
+class Janela {
+  +acao_projeto(acao)
+  +atualizar()
+}
+class CadastroService {
+  +cadastrar(dados)
+  +editar(id, dados)
+  +excluir(id)
+}
+class EstoqueService {
+  +receber(id, quantidade, custo, referencia)
+  +contar(id, contado, justificativa)
+}
+class ProjetoService {
+  +criar(nome, cliente, itens)
+  +reservar(id)
+  +concluir(id)
+  +cancelar(id)
+}
+class ConsultaService {
+  +consultar()
+  +sugerir_compras(politica)
+}
+class Transacoes {
+  +executar(acao, detalhe, operacao)
+}
+interface RepositorioEstado <<Protocol>> {
+  +carregar(): Snapshot
+  +salvar(estado, revisao)
+}
+class SQLiteRepositorio
+class MemoriaRepositorio
+class PublicadorEventos {
+  +inscrever(observador)
+  +remover(observador)
+  +publicar(evento, estado)
+}
+interface ObservadorEstoque <<Protocol>> {
+  +atualizar(evento, estado)
+}
+class AlertaEstoqueObserver
+class AuditoriaObserver
+interface PoliticaReposicao <<Protocol>> {
+  +sugerir(material): Decimal
+}
+class ReposicaoMinima
+class ReposicaoAlvo
+class EstadoEstoque {
+  +guardar_material(material)
+  +guardar_projeto(projeto)
+  +validar()
+}
+abstract class Material {
+  +receber(q, custo): Material
+  +reservar(q): Material
+  +consumir_reserva(q): Material
+}
+class Projeto {
+  +reservar(): Projeto
+  +concluir(): Projeto
+  +cancelar(): Projeto
+}
+Janela ..> CadastroService
+Janela ..> EstoqueService
+Janela ..> ProjetoService
+Janela ..> ConsultaService
+CadastroService --> Transacoes
+EstoqueService --> Transacoes
+ProjetoService --> Transacoes
+ConsultaService --> Transacoes
+Transacoes --> RepositorioEstado
+Transacoes --> PublicadorEventos
+Transacoes ..> EstadoEstoque
+SQLiteRepositorio ..|> RepositorioEstado
+MemoriaRepositorio ..|> RepositorioEstado
+PublicadorEventos "1" o-- "0..*" ObservadorEstoque
+AlertaEstoqueObserver ..|> ObservadorEstoque
+AuditoriaObserver ..|> ObservadorEstoque
+ConsultaService ..> PoliticaReposicao
+ReposicaoMinima ..|> PoliticaReposicao
+ReposicaoAlvo ..|> PoliticaReposicao
+EstadoEstoque "1" o-- "0..*" Material
+EstadoEstoque "1" o-- "0..*" Projeto
+@enduml
