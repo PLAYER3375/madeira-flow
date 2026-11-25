@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1450" height="970" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1450 970" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1450" height="970"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-970)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1450" height="970" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="35" y="935" style="font-family: Segoe UI, Arial; font-size: 23px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1870) scale(1,-1)">Modelo conceitual — conceitos, atributos e multiplicidades</text>
+			<path d="M 180,590 L 180,670 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 180,670 L 170,670 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 580,590 L 580,690 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 580,690 L 300,690 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 170,670 L 170,726 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="170 726, 175.6546 714.2942, 164.3454 714.2942" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 300,690 L 300,726 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="300 726, 305.6546 714.2942, 294.3454 714.2942" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="40" y="630" style="font-family: Segoe UI, Arial; font-size: 15px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1260) scale(1,-1)">especializa</text>
+			<text x="445" y="630" style="font-family: Segoe UI, Arial; font-size: 15px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1260) scale(1,-1)">especializa</text>
+			<path d="M 1150,798 L 1150,590 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1150 798, 1144 790, 1150 782, 1156 790" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="1158.0" y="702.0" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1404) scale(1,-1)">1 contém 1..*</text>
+			<path d="M 1000,550 L 850,550 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 850,550 L 850,800 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 850,800 L 380,800 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="380 800, 391.7058 805.6546, 391.7058 794.3454" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="480" y="815" style="font-family: Segoe UI, Arial; font-size: 15px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1630) scale(1,-1)">0..* itens especificam 1 material</text>
+			<path d="M 900,205 L 800,205 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 800,205 L 800,420 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 800,420 L 375,420 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 375,420 L 375,726 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="375 726, 380.6546 714.2942, 369.3454 714.2942" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="390" y="435" style="font-family: Segoe UI, Arial; font-size: 15px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,870) scale(1,-1)">0..* movimentos registram 1 material</text>
+			<path d="M 1200,205 L 1380,205 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 1380,205 L 1380,840 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 1380,840 L 1300,840 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1300 840, 1311.706 845.6546, 1311.706 834.3454" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="910" y="320" style="font-family: Segoe UI, Arial; font-size: 15px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,640) scale(1,-1)">0..* movimentos / 0..1 projeto</text>
+			<rect x="80" y="726" width="300" height="154" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="80" y="842" width="300" height="38" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="198.5625" y="854" style="font-family: Segoe UI, Arial; font-size: 16px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1708) scale(1,-1)">Material</text>
+			<text x="92" y="819" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1638) scale(1,-1)">sku; nome; unidade</text>
+			<text x="92" y="795" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1590) scale(1,-1)">minimo; alvo</text>
+			<text x="92" y="771" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1542) scale(1,-1)">fisico; reservado; custo_medio</text>
+			<text x="92" y="747" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1494) scale(1,-1)">/disponivel</text>
+			<rect x="30" y="484" width="300" height="106" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="30" y="552" width="300" height="38" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="156.62109375" y="564" style="font-family: Segoe UI, Arial; font-size: 16px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1128) scale(1,-1)">Chapa</text>
+			<text x="42" y="529" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1058) scale(1,-1)">comprimento; largura; espessura</text>
+			<text x="42" y="505" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1010) scale(1,-1)">acabamento</text>
+			<rect x="430" y="508" width="300" height="82" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="430" y="552" width="300" height="38" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="552.046875" y="564" style="font-family: Segoe UI, Arial; font-size: 16px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1128) scale(1,-1)">Insumo</text>
+			<text x="442" y="529" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1058) scale(1,-1)">especificacao</text>
+			<rect x="1000" y="798" width="300" height="82" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1000" y="842" width="300" height="38" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="1122.40625" y="854" style="font-family: Segoe UI, Arial; font-size: 16px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1708) scale(1,-1)">Projeto</text>
+			<text x="1012" y="819" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1638) scale(1,-1)">nome; cliente; status</text>
+			<rect x="1000" y="508" width="300" height="82" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1000" y="552" width="300" height="38" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="1105.1015625" y="564" style="font-family: Segoe UI, Arial; font-size: 16px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1128) scale(1,-1)">ItemProjeto</text>
+			<text x="1012" y="529" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1058) scale(1,-1)">quantidade</text>
+			<rect x="900" y="126" width="300" height="154" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="900" y="242" width="300" height="38" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="993.89453125" y="254" style="font-family: Segoe UI, Arial; font-size: 16px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,508) scale(1,-1)">Movimentacao</text>
+			<text x="912" y="219" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,438) scale(1,-1)">instante; tipo; quantidade</text>
+			<text x="912" y="195" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,390) scale(1,-1)">sku; nome; unidade</text>
+			<text x="912" y="171" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,342) scale(1,-1)">fisico_apos; reservado_apos</text>
+			<text x="912" y="147" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,294) scale(1,-1)">custo_unitario; referencia</text>
+			<text x="40" y="50" style="font-family: Segoe UI, Arial; font-size: 18px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,100) scale(1,-1)">Disponível = físico − reservado; 0 ≤ reservado ≤ físico. Referências no código usam IDs permanentes.</text>
+		</g>
+	</g>
+</svg>

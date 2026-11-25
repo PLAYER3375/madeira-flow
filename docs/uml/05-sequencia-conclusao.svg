@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1880" height="1740" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1880 1740" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1880" height="1740"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-1740)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1880" height="1740" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="9" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="63.66064453125" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">Produção</text>
+			<path d="M 95,1640 L 95,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="196" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="261.33837890625" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">Janela</text>
+			<path d="M 282,1640 L 282,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="383" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="421.4287109375" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">ProjetoService</text>
+			<path d="M 469,1640 L 469,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="570" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="619.75927734375" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">Transacoes</text>
+			<path d="M 656,1640 L 656,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="757" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="782.9873046875" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">RepositorioEstado</text>
+			<path d="M 843,1640 L 843,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="944" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="981.92626953125" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">EstadoEstoque</text>
+			<path d="M 1030,1640 L 1030,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="1131" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="1192.85546875" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">Projeto</text>
+			<path d="M 1217,1640 L 1217,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="1318" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="1376.4921875" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">Material</text>
+			<path d="M 1404,1640 L 1404,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="1505" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="1529.99609375" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">PublicadorEventos</text>
+			<path d="M 1591,1640 L 1591,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<rect x="1692" y="1640" width="172" height="65" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="1713.57470703125" y="1667" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3334) scale(1,-1)">ObservadorEstoque</text>
+			<path d="M 1778,1640 L 1778,45 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<path d="M 95,1554 L 282,1554 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="282 1554, 270.2942 1548.345, 270.2942 1559.655" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="127.04833984375" y="1564" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3128) scale(1,-1)">concluir e confirmar</text>
+			<path d="M 282,1508 L 469,1508 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="469 1508, 457.2942 1502.345, 457.2942 1513.655" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="341.142578125" y="1518" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,3036) scale(1,-1)">concluir(id)</text>
+			<path d="M 469,1462 L 656,1462 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="656 1462, 644.2942 1456.345, 644.2942 1467.655" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="459.04833984375" y="1472" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2944) scale(1,-1)">executar(acao, detalhe, operacao)</text>
+			<path d="M 656,1416 L 843,1416 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="843 1416, 831.2942 1410.345, 831.2942 1421.655" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="719.83544921875" y="1426" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2852) scale(1,-1)">carregar()</text>
+			<path d="M 843,1370 L 656,1370 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="656 1370, 667.7058 1375.655, 667.7058 1364.345" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="646.34912109375" y="1380" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2760) scale(1,-1)">Snapshot(estado isolado, revisao)</text>
+			<path d="M 656,1324 L 469,1324 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="469 1324, 480.7058 1329.655, 480.7058 1318.345" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="465.361328125" y="1334" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2668) scale(1,-1)">operacao(estado) [função local]</text>
+			<path d="M 469,1278 L 1217,1278 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1217 1278, 1205.294 1272.345, 1205.294 1283.655" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="751.82568359375" y="1288" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2576) scale(1,-1)">concluir() [exige RESERVADO]</text>
+			<path d="M 1217,1232 L 469,1232 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="469 1232, 480.7058 1237.655, 480.7058 1226.345" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="761.83349609375" y="1242" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2484) scale(1,-1)">novo projeto CONCLUIDO</text>
+			<rect x="10" y="1184" width="1850" height="30" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,93%,88%); fill-rule: evenodd;"/>
+			<text x="25" y="1193" style="font-family: Segoe UI, Arial; font-size: 15px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2386) scale(1,-1)">alt — estado permitido e todos os itens válidos</text>
+			<path d="M 469,1146 L 1404,1146 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1404 1146, 1392.294 1140.345, 1392.294 1151.655" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="840.7626953125" y="1156" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2312) scale(1,-1)">loop itens: consumir_reserva(q)</text>
+			<path d="M 1404,1100 L 469,1100 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="469 1100, 480.7058 1105.655, 480.7058 1094.345" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="892.44921875" y="1110" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2220) scale(1,-1)">nova entidade</text>
+			<path d="M 469,1054 L 1030,1054 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1030 1054, 1018.294 1048.345, 1018.294 1059.655" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="601.81640625" y="1064" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2128) scale(1,-1)">guardar_material(material); registrar movimento</text>
+			<path d="M 469,1008 L 1030,1008 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1030 1008, 1018.294 1002.345, 1018.294 1013.655" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="680.1767578125" y="1018" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,2036) scale(1,-1)">guardar_projeto(novo)</text>
+			<path d="M 469,962 L 656,962 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="656 962, 644.2942 956.3454, 644.2942 967.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="466.359375" y="972" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1944) scale(1,-1)">operação concluída localmente</text>
+			<path d="M 656,916 L 1591,916 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1591 916, 1579.294 910.3454, 1579.294 921.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="1049.1318359375" y="926" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1852) scale(1,-1)">publicar(evento, estado)</text>
+			<path d="M 1591,870 L 1778,870 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1778 870, 1766.294 864.3454, 1766.294 875.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="1564.13623046875" y="880" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1760) scale(1,-1)">loop inscritos: atualizar(evento, estado)</text>
+			<path d="M 656,824 L 1030,824 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1030 824, 1018.294 818.3454, 1018.294 829.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="818.35302734375" y="834" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1668) scale(1,-1)">validar()</text>
+			<path d="M 656,778 L 843,778 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="843 778, 831.2942 772.3454, 831.2942 783.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="681.701171875" y="788" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1576) scale(1,-1)">salvar(estado, revisao)</text>
+			<text x="853" y="732" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1464) scale(1,-1)">UPDATE por revisão; COMMIT</text>
+			<path d="M 656,686 L 469,686 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="469 686, 480.7058 691.6546, 480.7058 680.3454" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="496.587890625" y="696" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1392) scale(1,-1)">sucesso após commit</text>
+			<path d="M 469,640 L 282,640 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="282 640, 293.7058 645.6546, 293.7058 634.3454" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="351.63232421875" y="650" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1300) scale(1,-1)">sucesso</text>
+			<path d="M 282,594 L 95,594 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="95 594, 106.7058 599.6546, 106.7058 588.3454" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="99.44140625" y="604" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1208) scale(1,-1)">saldos e situação atualizados</text>
+			<rect x="10" y="546" width="1850" height="30" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,93%,88%); fill-rule: evenodd;"/>
+			<text x="25" y="555" style="font-family: Segoe UI, Arial; font-size: 15px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1110) scale(1,-1)">else — estado proibido / falta em qualquer item</text>
+			<path d="M 469,508 L 656,508 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="656 508, 644.2942 502.3454, 644.2942 513.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="482.79638671875" y="518" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1036) scale(1,-1)">RegraNegocio; sem salvar</text>
+			<path d="M 656,462 L 469,462 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="469 462, 480.7058 467.6546, 480.7058 456.3454" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="482.36572265625" y="472" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,944) scale(1,-1)">erro; snapshot descartado</text>
+			<path d="M 469,416 L 282,416 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="282 416, 293.7058 421.6546, 293.7058 410.3454" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="305.84521484375" y="426" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,852) scale(1,-1)">mensagem de rejeição</text>
+			<path d="M 282,370 L 95,370 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1; stroke-dasharray: 6, 4;"/>
+			<polygon points="95 370, 106.7058 375.6546, 106.7058 364.3454" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="67.89697265625" y="380" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,760) scale(1,-1)">estado confirmado anterior preservado</text>
+			<text x="30" y="90" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,180) scale(1,-1)">Falha de observador, escrita ou conflito de revisão também impede confirmação. Nenhum efeito externo nos observadores.</text>
+		</g>
+	</g>
+</svg>

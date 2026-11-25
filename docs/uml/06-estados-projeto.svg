@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1300" height="740" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1300 740" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1300" height="740"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-740)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1300" height="740" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="30" y="700" style="font-family: Segoe UI, Arial; font-size: 25px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1400) scale(1,-1)">Ciclo de vida do projeto</text>
+			<path d="M 340,520 L 530,520 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="530 520, 518.2942 514.3454, 518.2942 525.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="443.0" y="528.0" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1056) scale(1,-1)">reservar [todos disponíveis]</text>
+			<path d="M 790,520 L 980,520 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="980 520, 968.2942 514.3454, 968.2942 525.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="893.0" y="528.0" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1056) scale(1,-1)">concluir [consumir reserva]</text>
+			<path d="M 210,470 L 660,220 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="660 220, 647.0212 220.7419, 652.5134 230.6278" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="443.0" y="353.0" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,706) scale(1,-1)">cancelar</text>
+			<path d="M 660,470 L 660,220 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="660 220, 654.3454 231.7058, 665.6546 231.7058" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="668.0" y="353.0" style="font-family: Segoe UI, Arial; font-size: 14px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,706) scale(1,-1)">cancelar [liberar reserva]</text>
+			<rect x="80" y="470" width="260" height="100" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="143.3583984375" y="512" style="font-family: Segoe UI, Arial; font-size: 23px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1024) scale(1,-1)">PLANEJADO</text>
+			<rect x="530" y="470" width="260" height="100" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="593.341552734375" y="512" style="font-family: Segoe UI, Arial; font-size: 23px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1024) scale(1,-1)">RESERVADO</text>
+			<rect x="980" y="470" width="260" height="100" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="1042.802490234375" y="512" style="font-family: Segoe UI, Arial; font-size: 23px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1024) scale(1,-1)">CONCLUIDO</text>
+			<rect x="530" y="120" width="260" height="100" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="591.19091796875" y="162" style="font-family: Segoe UI, Arial; font-size: 23px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,324) scale(1,-1)">CANCELADO</text>
+			<ellipse cx="25.0" cy="520.0" rx="9.0" ry="9.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<path d="M 35,520 L 80,520 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="80 520, 68.29419 514.3454, 68.29419 525.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<path d="M 130,570 L 130,640 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 130,640 L 285,640 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 285,640 L 285,570 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="285 570, 279.3454 581.7058, 290.6546 581.7058" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="90" y="655" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1310) scale(1,-1)">editar [itens válidos]</text>
+			<ellipse cx="1110.0" cy="400.0" rx="13.0" ry="13.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<ellipse cx="1110.0" cy="400.0" rx="8.0" ry="8.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<ellipse cx="920.0" cy="170.0" rx="13.0" ry="13.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<ellipse cx="920.0" cy="170.0" rx="8.0" ry="8.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<path d="M 1110,470 L 1110,413 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="1110 413, 1104.345 424.7058, 1115.655 424.7058" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<path d="M 790,170 L 907,170 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<polygon points="907 170, 895.2942 164.3454, 895.2942 175.6546" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(12%,29%,23%); fill-rule: evenodd;"/>
+			<text x="35" y="45" style="font-family: Segoe UI, Arial; font-size: 18px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,90) scale(1,-1)">CONCLUIDO e CANCELADO são terminais. Reserva não altera físico; conclusão reduz físico e reservado juntos.</text>
+		</g>
+	</g>
+</svg>

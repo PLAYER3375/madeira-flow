@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1250" height="980" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1250 980" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1250" height="980"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-980)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1250" height="980" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="330" y="45" width="855" height="890" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="566.69482421875" y="902" style="font-family: Segoe UI, Arial; font-size: 22px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1804) scale(1,-1)">MadeiraFlow — fronteira do sistema</text>
+			<ellipse cx="155.0" cy="780.0" rx="15.0" ry="15.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 155,765 L 155,715 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 125,745 L 185,745 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 155,715 L 130,680 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 155,715 L 180,680 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<text x="111.36669921875" y="655" style="font-family: Segoe UI, Arial; font-size: 18px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1310) scale(1,-1)">Estoquista</text>
+			<path d="M 185,745 L 500,845 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 185,745 L 500,766 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 185,745 L 500,608 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<ellipse cx="155.0" cy="495.0" rx="15.0" ry="15.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 155,480 L 155,430 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 125,460 L 185,460 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 155,430 L 130,395 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 155,430 L 180,395 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<text x="114.70654296875" y="370" style="font-family: Segoe UI, Arial; font-size: 18px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,740) scale(1,-1)">Produção</text>
+			<path d="M 185,460 L 500,687 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 185,460 L 500,529 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 185,460 L 500,450 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 185,460 L 500,371 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 185,460 L 500,292 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<ellipse cx="155.0" cy="195.0" rx="15.0" ry="15.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<path d="M 155,180 L 155,130 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 125,160 L 185,160 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 155,130 L 130,95 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 155,130 L 180,95 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<text x="127.18701171875" y="70" style="font-family: Segoe UI, Arial; font-size: 18px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,140) scale(1,-1)">Gestor</text>
+			<path d="M 185,160 L 500,687 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 185,160 L 500,213 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<path d="M 185,160 L 500,134 Z" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1.1;"/>
+			<ellipse cx="790.0" cy="845.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="701.376708984375" y="839" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1678) scale(1,-1)">UC01 · Manter catálogo</text>
+			<ellipse cx="790.0" cy="766.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="696.6328125" y="760" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1520) scale(1,-1)">UC02 · Receber materiais</text>
+			<ellipse cx="790.0" cy="687.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="655.50244140625" y="681" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1362) scale(1,-1)">UC03 · Acompanhar disponibilidade</text>
+			<ellipse cx="790.0" cy="608.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="691.075439453125" y="602" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1204) scale(1,-1)">UC04 · Conciliar inventário</text>
+			<ellipse cx="790.0" cy="529.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="703.87109375" y="523" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,1046) scale(1,-1)">UC05 · Planejar projeto</text>
+			<ellipse cx="790.0" cy="450.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="695.043212890625" y="444" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,888) scale(1,-1)">UC06 · Reservar materiais</text>
+			<ellipse cx="790.0" cy="371.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="694.063720703125" y="365" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,730) scale(1,-1)">UC07 · Concluir produção</text>
+			<ellipse cx="790.0" cy="292.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="701.501220703125" y="286" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,572) scale(1,-1)">UC08 · Cancelar projeto</text>
+			<ellipse cx="790.0" cy="213.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="641.353759765625" y="207" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,414) scale(1,-1)">UC09 · Rastrear movimentos e auditoria</text>
+			<ellipse cx="790.0" cy="134.0" rx="290.0" ry="30.0" style="stroke: rgb(12%,29%,23%); stroke-linecap: butt; stroke-width: 1; fill: rgb(91%,93%,89%); fill-rule: evenodd;"/>
+			<text x="694.893798828125" y="128" style="font-family: Segoe UI, Arial; font-size: 17px;fill: rgb(12%,29%,23%); stroke:none;" transform="translate(0,256) scale(1,-1)">UC10 · Planejar reposição</text>
+		</g>
+	</g>
+</svg>
