@@ -1,0 +1,80 @@
+MadeiraFlow Python — evidência de execução
+Python: 3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]
+Plataforma: Windows-11-10.0.26200-SP0
+RUN_GUI_TESTS=1
+
+test_callbacks_de_reserva_conclusao_e_rejeicao_duplicada (tests.test_interface.TestInterface.test_callbacks_de_reserva_conclusao_e_rejeicao_duplicada) ... ok
+test_formulario_invalido_permanece_aberto_sem_confirmar (tests.test_interface.TestInterface.test_formulario_invalido_permanece_aberto_sem_confirmar) ... ok
+test_formulario_material_salva_pelos_servicos (tests.test_interface.TestInterface.test_formulario_material_salva_pelos_servicos) ... ok
+test_formulario_projeto_adiciona_itens_e_salva (tests.test_interface.TestInterface.test_formulario_projeto_adiciona_itens_e_salva) ... ok
+test_formulario_recebimento_e_inventario (tests.test_interface.TestInterface.test_formulario_recebimento_e_inventario) ... ok
+test_pesquisa_e_selecao_sem_resultados (tests.test_interface.TestInterface.test_pesquisa_e_selecao_sem_resultados) ... ok
+test_strategy_atualiza_tabela_de_reposicao (tests.test_interface.TestInterface.test_strategy_atualiza_tabela_de_reposicao) ... ok
+test_arquivo_vazio_nao_e_reinicializado (tests.test_persistencia.TestPersistencia.test_arquivo_vazio_nao_e_reinicializado) ... ok
+test_backup_restauravel_e_rejeita_sobrescrita (tests.test_persistencia.TestPersistencia.test_backup_restauravel_e_rejeita_sobrescrita) ... ok
+test_cli_corrompido_retorna_erro (tests.test_persistencia.TestPersistencia.test_cli_corrompido_retorna_erro) ... ok
+test_cli_cria_demo_valida_e_nao_repete_seed (tests.test_persistencia.TestPersistencia.test_cli_cria_demo_valida_e_nao_repete_seed) ... ok
+test_concorrencia_rejeita_snapshot_antigo_sem_perder_commit (tests.test_persistencia.TestPersistencia.test_concorrencia_rejeita_snapshot_antigo_sem_perder_commit) ... ok
+test_corrompido_nao_e_sobrescrito (tests.test_persistencia.TestPersistencia.test_corrompido_nao_e_sobrescrito) ... ok
+test_demo_falha_de_seed_nao_deixa_base_parcial (tests.test_persistencia.TestPersistencia.test_demo_falha_de_seed_nao_deixa_base_parcial) ... ok
+test_demo_usa_servicos_e_quantidades_esperadas (tests.test_persistencia.TestPersistencia.test_demo_usa_servicos_e_quantidades_esperadas) ... ok
+test_dominio_nao_depende_de_ui_sqlite_ou_aplicacao (tests.test_persistencia.TestPersistencia.test_dominio_nao_depende_de_ui_sqlite_ou_aplicacao) ... ok
+test_json_invalido_recusado_sem_limpar_base (tests.test_persistencia.TestPersistencia.test_json_invalido_recusado_sem_limpar_base) ... ok
+test_memoria_tambem_rejeita_revisao_antiga (tests.test_persistencia.TestPersistencia.test_memoria_tambem_rejeita_revisao_antiga) ... ok
+test_repositorio_fechado_gera_erro_compreensivel (tests.test_persistencia.TestPersistencia.test_repositorio_fechado_gera_erro_compreensivel) ... ok
+test_reserva_inconsistente_e_recusada_pelo_codec (tests.test_persistencia.TestPersistencia.test_reserva_inconsistente_e_recusada_pelo_codec) ... ok
+test_rn12_erro_de_io_nao_confirma (tests.test_persistencia.TestPersistencia.test_rn12_erro_de_io_nao_confirma) ... ok
+test_rn12_rollback_sqlite_real_quando_update_falha (tests.test_persistencia.TestPersistencia.test_rn12_rollback_sqlite_real_quando_update_falha) ... ok
+test_sqlite_preserva_dominio_decimal_e_historico_apos_reabrir (tests.test_persistencia.TestPersistencia.test_sqlite_preserva_dominio_decimal_e_historico_apos_reabrir) ... ok
+test_versao_futura_recusada (tests.test_persistencia.TestPersistencia.test_versao_futura_recusada) ... ok
+test_numeros_aceitam_virgula_e_ponto (tests.test_regras.TestRegras.test_numeros_aceitam_virgula_e_ponto) ... ok
+test_numeros_rejeitam_nao_finitos_float_e_formato_ambiguo (tests.test_regras.TestRegras.test_numeros_rejeitam_nao_finitos_float_e_formato_ambiguo) ... ok
+test_observer_inscricao_e_remocao (tests.test_regras.TestRegras.test_observer_inscricao_e_remocao) ... ok
+test_pesquisa_por_nome_sku_e_sem_resultado (tests.test_regras.TestRegras.test_pesquisa_por_nome_sku_e_sem_resultado) ... ok
+test_rn01_normaliza_sku_e_textos (tests.test_regras.TestRegras.test_rn01_normaliza_sku_e_textos) ... ok
+test_rn01_rejeita_obrigatorios_e_sku_invalido (tests.test_regras.TestRegras.test_rn01_rejeita_obrigatorios_e_sku_invalido) ... ok
+test_rn01_rejeita_sku_duplicado_sem_confirmar (tests.test_regras.TestRegras.test_rn01_rejeita_sku_duplicado_sem_confirmar) ... ok
+test_rn02_chapa_rejeita_dimensao_nao_positiva (tests.test_regras.TestRegras.test_rn02_chapa_rejeita_dimensao_nao_positiva) ... ok
+test_rn02_chapa_tem_dimensoes_e_comportamento_especifico (tests.test_regras.TestRegras.test_rn02_chapa_tem_dimensoes_e_comportamento_especifico) ... ok
+test_rn02_chapas_e_un_nao_admitem_fracao (tests.test_regras.TestRegras.test_rn02_chapas_e_un_nao_admitem_fracao) ... ok
+test_rn02_edicao_nao_muda_unidade (tests.test_regras.TestRegras.test_rn02_edicao_nao_muda_unidade) ... ok
+test_rn02_rejeita_quarta_casa_na_quantidade (tests.test_regras.TestRegras.test_rn02_rejeita_quarta_casa_na_quantidade) ... ok
+test_rn02_unidades_continuas_admitem_tres_casas (tests.test_regras.TestRegras.test_rn02_unidades_continuas_admitem_tres_casas) ... ok
+test_rn03_arredonda_half_up_em_quatro_casas (tests.test_regras.TestRegras.test_rn03_arredonda_half_up_em_quatro_casas) ... ok
+test_rn03_custo_medio_ponderado_e_movimento (tests.test_regras.TestRegras.test_rn03_custo_medio_ponderado_e_movimento) ... ok
+test_rn03_recebimento_rejeita_quantidade_custo_ou_referencia (tests.test_regras.TestRegras.test_rn03_recebimento_rejeita_quantidade_custo_ou_referencia) ... ok
+test_rn04_disponivel_e_valor (tests.test_regras.TestRegras.test_rn04_disponivel_e_valor) ... ok
+test_rn04_entidade_imutavel_e_saldo_invalido_rejeitado (tests.test_regras.TestRegras.test_rn04_entidade_imutavel_e_saldo_invalido_rejeitado) ... ok
+test_rn05_projeto_com_varios_itens_nao_reserva_ao_planejar (tests.test_regras.TestRegras.test_rn05_projeto_com_varios_itens_nao_reserva_ao_planejar) ... ok
+test_rn05_rejeita_item_duplicado_inexistente_e_fracionado (tests.test_regras.TestRegras.test_rn05_rejeita_item_duplicado_inexistente_e_fracionado) ... ok
+test_rn05_rejeita_item_nao_positivo (tests.test_regras.TestRegras.test_rn05_rejeita_item_nao_positivo) ... ok
+test_rn05_rejeita_projeto_sem_itens_nome_ou_cliente (tests.test_regras.TestRegras.test_rn05_rejeita_projeto_sem_itens_nome_ou_cliente) ... ok
+test_rn06_falta_no_ultimo_item_preserva_todo_estado (tests.test_regras.TestRegras.test_rn06_falta_no_ultimo_item_preserva_todo_estado) ... ok
+test_rn06_planejado_pode_ser_editado (tests.test_regras.TestRegras.test_rn06_planejado_pode_ser_editado) ... ok
+test_rn06_projetos_nao_prometem_mesmo_saldo (tests.test_regras.TestRegras.test_rn06_projetos_nao_prometem_mesmo_saldo) ... ok
+test_rn06_reserva_integral (tests.test_regras.TestRegras.test_rn06_reserva_integral) ... ok
+test_rn06_reservado_nao_pode_ser_editado_ou_reservado_de_novo (tests.test_regras.TestRegras.test_rn06_reservado_nao_pode_ser_editado_ou_reservado_de_novo) ... ok
+test_rn07_conclusao_reduz_fisico_e_reservado_preservando_disponivel (tests.test_regras.TestRegras.test_rn07_conclusao_reduz_fisico_e_reservado_preservando_disponivel) ... ok
+test_rn07_rejeita_conclusao_sem_reserva_e_duplicada (tests.test_regras.TestRegras.test_rn07_rejeita_conclusao_sem_reserva_e_duplicada) ... ok
+test_rn08_cancelamento_libera_sem_alterar_fisico (tests.test_regras.TestRegras.test_rn08_cancelamento_libera_sem_alterar_fisico) ... ok
+test_rn08_cancelamento_planejado_sem_movimento (tests.test_regras.TestRegras.test_rn08_cancelamento_planejado_sem_movimento) ... ok
+test_rn08_terminais_nao_podem_ser_cancelados_ou_reservados (tests.test_regras.TestRegras.test_rn08_terminais_nao_podem_ser_cancelados_ou_reservados) ... ok
+test_rn09_contagem_igual_gera_evidencia_zero (tests.test_regras.TestRegras.test_rn09_contagem_igual_gera_evidencia_zero) ... ok
+test_rn09_contagem_registra_diferenca_assinada_e_preserva_custo (tests.test_regras.TestRegras.test_rn09_contagem_registra_diferenca_assinada_e_preserva_custo) ... ok
+test_rn09_rejeita_abaixo_reserva_negativo_e_sem_justificativa (tests.test_regras.TestRegras.test_rn09_rejeita_abaixo_reserva_negativo_e_sem_justificativa) ... ok
+test_rn10_edicao_preserva_id_saldo_e_snapshot_historico (tests.test_regras.TestRegras.test_rn10_edicao_preserva_id_saldo_e_snapshot_historico) ... ok
+test_rn10_exclui_material_sem_referencias (tests.test_regras.TestRegras.test_rn10_exclui_material_sem_referencias) ... ok
+test_rn10_rejeita_exclusao_com_saldo_historico_ou_projeto (tests.test_regras.TestRegras.test_rn10_rejeita_exclusao_com_saldo_historico_ou_projeto) ... ok
+test_rn11_alerta_no_limite_com_sugestao_minima_zero (tests.test_regras.TestRegras.test_rn11_alerta_no_limite_com_sugestao_minima_zero) ... ok
+test_rn11_cancelamento_remove_alerta (tests.test_regras.TestRegras.test_rn11_cancelamento_remove_alerta) ... ok
+test_rn11_rejeita_limites_invalidos (tests.test_regras.TestRegras.test_rn11_rejeita_limites_invalidos) ... ok
+test_rn11_strategy_minima_e_alvo (tests.test_regras.TestRegras.test_rn11_strategy_minima_e_alvo) ... ok
+test_rn12_commit_inclui_movimentos_alertas_e_auditoria (tests.test_regras.TestRegras.test_rn12_commit_inclui_movimentos_alertas_e_auditoria) ... ok
+test_rn12_copia_de_consulta_nao_modifica_repositorio (tests.test_regras.TestRegras.test_rn12_copia_de_consulta_nao_modifica_repositorio) ... ok
+test_rn12_falha_observador_descarta_tudo (tests.test_regras.TestRegras.test_rn12_falha_observador_descarta_tudo) ... ok
+test_strategy_substituivel_sem_mudar_servico (tests.test_regras.TestRegras.test_strategy_substituivel_sem_mudar_servico) ... ok
+
+----------------------------------------------------------------------
+Ran 70 tests in 2.670s
+
+OK
