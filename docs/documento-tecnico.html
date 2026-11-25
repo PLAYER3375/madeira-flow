@@ -1,0 +1,302 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Documento técnico</title><style>body{max-width:1100px;margin:auto;padding:40px;font:16px/1.6 system-ui;color:#214b3b}pre{white-space:pre-wrap;font:inherit}article{border-bottom:1px solid #ccd8c6;padding:20px 0}</style><h1>MadeiraFlow Python — documento técnico</h1><article><pre># Visão do problema e escopo
+
+Uma marcenaria compartilha chapas, parafusos, cavilhas, fitas e cola entre encomendas. Conhecer apenas o saldo no depósito permite prometer o mesmo material para dois clientes. Isso interrompe a produção e leva a compras sem necessidade conhecida.
+
+O MadeiraFlow diferencia físico, reservado e disponível, com lista de materiais para cada projeto. Separação e consumo são operações integrais e rastreáveis.
+
+## Atores
+
+| Ator | Objetivos |
+|---|---|
+| Estoquista | Manter materiais, receber entregas e conferir inventário |
+| Responsável pela produção | Planejar encomendas, reservar, concluir ou cancelar |
+| Gestor | Acompanhar disponibilidade, histórico e reposição |
+
+São papéis operacionais, sem contas e permissões nesta versão local.
+
+## Escopo
+
+Inclui chapas/insumos, custo médio, inventário justificado, projetos com vários materiais, reserva/baixa/cancelamento integrais, histórico, auditoria, alertas, duas políticas de reposição, persistência e demonstração.
+
+Exclui plano de corte, retalhos, chapas fracionadas, orçamento de móveis, pedidos ao fornecedor, financeiro, fiscal, devoluções, múltiplos depósitos, autenticação e arquivo compartilhado por rede. Produção informa quantas chapas inteiras serão necessárias.
+
+## Glossário
+
+| Termo | Significado |
+|---|---|
+| SKU | Identificação única do material, normalizada em maiúsculas |
+| Chapa | Painel inteiro com dimensões em mm e acabamento |
+| Insumo | Material auxiliar em UN, M, L ou KG |
+| Físico | Quantidade existente no depósito |
+| Reservado | Parcela comprometida com projetos reservados |
+| Disponível | Físico menos reservado |
+| Mínimo / alvo | Limite de alerta / quantidade desejada após reposição |
+| Projeto | Encomenda com nome, cliente, itens e situação de produção |
+| Custo médio | Média ponderada dos recebimentos |
+| Baixa | Consumo do material previamente reservado |
+
+## Fontes e processo
+
+O enunciado é `APSOO_Trabalho_Pratico_Projeto_Final.pptx.pdf`, p. 3–5, 8–16 e 18–29. Os demais sete PDFs são contexto conceitual: exercícios de outros domínios não viram requisitos do MadeiraFlow. Tecnologia livre (p. 4) permite a reconstrução em Python. A versão Java permanece separada; todos os artefatos desta pasta descrevem Python.
+</pre></article><article><pre># Requisitos e regras de negócio
+
+## Requisitos funcionais
+
+| ID | Capacidade | UC |
+|---|---|---|
+| RF01 | Cadastrar chapas/insumos com SKU, unidade, limites e características | UC01 |
+| RF02 | Pesquisar, editar e excluir materiais preservando referências | UC01 |
+| RF03 | Receber material com quantidade, custo e referência | UC02 |
+| RF04 | Consultar físico, reservado, disponível e valor | UC03 |
+| RF05 | Conferir inventário com contagem e justificativa | UC04 |
+| RF06 | Criar/editar projetos planejados com vários materiais | UC05 |
+| RF07 | Reservar integralmente os materiais de um projeto | UC06 |
+| RF08 | Concluir produção consumindo reserva uma única vez | UC07 |
+| RF09 | Cancelar projeto e liberar eventual reserva | UC08 |
+| RF10 | Consultar movimentos e auditoria em ordem inversa de registro | UC09 |
+| RF11 | Exibir alertas atualizados de disponível baixo | UC10 |
+| RF12 | Comparar reposição até o mínimo e até o alvo | UC10 |
+
+## Requisitos não funcionais
+
+| ID | Restrição mensurável | Verificação |
+|---|---|---|
+| RNF01 | Offline com Python 3.11+ e Tk, sem pacotes de execução externos | Lançadores e `.pyz`; execução local em 3.14.2 |
+| RNF02 | Preservar dados e confirmar negócio/histórico/alertas/auditoria juntos | Reabertura, rollback SQLite e falhas injetadas |
+| RNF03 | Rejeitar gravação com revisão antiga preservando commit recente | Duas conexões e conflito otimista |
+| RNF04 | Fluxos pela interface e erro compreensível sem fechar formulário inválido | Sete testes gráficos e roteiro manual |
+| RNF05 | Domínio independente de UI, aplicação, SQLite e infraestrutura | Teste AST |
+| RNF06 | Um comando de teste, relatório e código de erro em falha | `test.bat` / `scripts/verificar.py` |
+
+Base até 32 MB de conteúdo JSON. Operação local pequena, sem meta de latência não medida.
+
+## Regras
+
+| ID | Regra |
+|---|---|
+| RN01 | SKU obrigatório/único, trim e maiúsculas, até 30 caracteres A–Z/0–9/._-. Nome e características obrigatórios |
+| RN02 | CHAPA/UN inteiros; M/L/KG até três casas. Dimensões positivas. Tipo/unidade não mudam na edição |
+| RN03 | Recebimento com quantidade/custo positivos, custo até duas casas e referência. Média ponderada pelo físico anterior, com quatro casas HALF_UP |
+| RN04 | 0 ≤ reservado ≤ físico; disponível = físico − reservado; sem edição de saldo no cadastro |
+| RN05 | Projeto com nome, cliente e ao menos um item existente; sem duplicatas; quantidade positiva compatível com unidade |
+| RN06 | Somente PLANEJADO é editável/reservável. Reserva valida TODOS os itens e rejeita integralmente se faltar qualquer um |
+| RN07 | Somente RESERVADO conclui. Consumo reduz físico/reservado e gera movimentos; segunda baixa rejeitada |
+| RN08 | PLANEJADO/RESERVADO podem cancelar. Liberação preserva físico. CONCLUIDO/CANCELADO são terminais |
+| RN09 | Contagem não negativa, nunca abaixo do reservado, justificada; diferença assinada inclusive zero; custo médio preservado |
+| RN10 | Exclusão exige saldo zero e ausência de projeto/movimento. Edição preserva ID/saldos; histórico mantém SKU/nome da época |
+| RN11 | Mínimo ≥ 0; alvo &gt; mínimo; limites compatíveis com unidade. Alerta se disponível ≤ mínimo. Mínima=max(0,mínimo−disponível); alvo=max(0,alvo−disponível), somente em alerta |
+| RN12 | Operação, movimentos, alertas e auditoria confirmados juntos; falha de validação, observador ou persistência descarta tentativa |
+
+Média = (físico anterior × custo médio anterior + quantidade recebida × custo unitário) / novo físico. Não há conversão/soma de quantidades entre unidades distintas. Estimativa não é cotação. Referência de recebimento não é chave fiscal de deduplicação. Vírgula ou ponto são decimais, sem milhares. Números não finitos são rejeitados; valores de entrada e saldo resultante são limitados a um trilhão.
+</pre></article><article><pre># Casos de uso
+
+Fronteira: MadeiraFlow. Atores humanos: Estoquista, Produção e Gestor. Persistência é detalhe interno. Diagrama em `uml/01-casos-de-uso.svg`, fonte PlantUML ao lado.
+
+| UC | Objetivo | Ator | RF / RN |
+|---|---|---|---|
+| UC01 | Manter catálogo de materiais | Estoquista | RF01–02 / RN01–02, RN10–11 |
+| UC02 | Receber materiais | Estoquista | RF03 / RN02–04, RN12 |
+| UC03 | Acompanhar disponibilidade | Gestor/Produção | RF04 / RN04 |
+| UC04 | Conciliar inventário | Estoquista | RF05 / RN02, RN04, RN09, RN12 |
+| UC05 | Planejar projeto | Produção | RF06 / RN05–06 |
+| UC06 | Reservar materiais do projeto | Produção | RF07 / RN04, RN06, RN11–12 |
+| UC07 | Concluir produção | Produção | RF08 / RN04, RN07, RN12 |
+| UC08 | Cancelar projeto | Produção | RF09 / RN08, RN12 |
+| UC09 | Rastrear movimentos e auditoria | Gestor | RF10 / RN10, RN12 |
+| UC10 | Planejar reposição | Gestor | RF11–12 / RN11 |
+
+## UC06 — Reservar materiais (central)
+
+**Ator:** produção. **Gatilho:** separar os materiais de uma encomenda. **Pré:** base acessível e projeto PLANEJADO com itens válidos. **Garantia mínima:** rejeição preserva todo o estado confirmado. **Pós:** projeto RESERVADO; físico preservado; reservado acrescido de cada item; movimentos/alertas/auditoria confirmados juntos.
+
+1. Ator seleciona projeto e consulta itens.
+2. Solicita Reservar e confirma.
+3. `ProjetoService.reservar` chama `Transacoes.executar`, que carrega snapshot isolado e revisão.
+4. Operação chama `Projeto.exigir_planejado` e `Material.validar_reserva` para TODOS os itens.
+5. Cada `Material.reservar` devolve nova entidade; serviço guarda material e registra RESERVA.
+6. `Projeto.reservar` devolve projeto RESERVADO, guardado no estado.
+7. Publicador notifica alertas/auditoria e o estado valida relações.
+8. Repositório salva se a revisão ainda é atual; interface mostra saldos.
+
+**Alternativas:** sem seleção, solicita uma linha. Confirmação cancelada não executa. Estado proibido rejeita. Falta de material informa SKU, disponível e solicitado; nada é comprometido. Falha de observador, banco ou conflito de revisão não confirma. Em conflito, ator atualiza e decide tentar novamente.
+
+**Exemplo:** A físico=10, B físico=1, reservas zero. Pedido A=3/B=2 falha; A reservado continua zero. Após receber B=1, pode reservar. **Sequência:** `04-sequencia-reserva`. **Testes:** RN06 integral, falta no último item, disputa; RN12 rollback.
+
+## UC07 — Concluir produção (central)
+
+**Ator:** produção. **Gatilho:** confirmar consumo dos materiais separados. **Pré:** projeto RESERVADO. **Pós:** CONCLUIDO; físico/reservado reduzidos pela mesma quantidade; disponível preservado; movimentos CONSUMO, alertas e auditoria confirmados.
+
+1. Ator seleciona projeto, consulta itens e solicita Concluir produção.
+2. Interface explica a baixa integral e solicita confirmação.
+3. Transacoes carrega snapshot; `Projeto.concluir` exige RESERVADO e prepara nova entidade.
+4. Cada `Material.consumir_reserva` reduz físico/reservado; serviço guarda e registra CONSUMO.
+5. Serviço guarda o projeto CONCLUIDO.
+6. Observadores atualizam snapshot; relações são validadas; repositório confirma uma vez.
+7. Interface mostra situação e saldos.
+
+**Alternativas:** cancelar confirmação não altera dados. PLANEJADO/CANCELADO/CONCLUIDO rejeitam; segunda conclusão não baixa novamente. Falha em qualquer colaboração descarta conjunto. **Exemplo:** físico=10/reservado=4/disponível=6 → físico=6/reservado=0/disponível=6. **Sequência:** `05-sequencia-conclusao`. **Testes:** RN07 vários itens, sem reserva e duplicada.
+
+## Demais especificações
+
+**UC01:** estoquista informa SKU/nome/unidade/limites/características; sistema valida e cadastra. Busca localiza por nome/SKU. Edição mantém tipo/unidade/ID/saldos. Exclusão exige confirmação e ausência de saldo/histórico/projeto. Erro preserva campos; cancelar formulário não grava.
+
+**UC02:** seleciona material, informa quantidade/custo/referência. Sistema valida, calcula média ponderada e registra ENTRADA. Físico zero adota custo do recebimento. Entrada inválida/falha de escrita não confirma.
+
+**UC03:** consulta saldos e valor na Visão geral/Materiais. Busca vazia mostra todos; sem correspondência, tabela vazia. Valores monetários são agregáveis; quantidades de unidades diferentes não.
+
+**UC04:** informa contado e justificativa. Sistema rejeita fração incompatível/negativo/abaixo da reserva. AJUSTE registra contado menos físico anterior, inclusive zero. Reserva/custo preservados.
+
+**UC05:** informa nome/cliente e adiciona itens. Duplicatas e quantidades incompatíveis rejeitam. Salvar cria PLANEJADO sem reservar. Edição exige essa situação.
+
+**UC08:** confirma cancelamento. RESERVADO libera itens e registra LIBERACAO; PLANEJADO muda estado e audita. Físico preservado. Estados terminais rejeitam.
+
+**UC09:** consulta movimentos/auditoria do registro mais recente ao antigo. Histórico preserva SKU/nome, quantidade, unidade, referência e saldos posteriores. Sem edição/exclusão pela interface.
+
+**UC10:** escolhe mínima/alvo; sistema sugere quantidade e estimativa pelo custo médio dos materiais em alerta. No mínimo, alerta permanece e mínima pode ser zero. Recebimento/cancelamento pode remover alerta. Sem pedido de compra automático.
+</pre></article><article><pre># Arquitetura e decisões de design OO
+
+## Responsabilidades
+
+| Módulo | Papel |
+|---|---|
+| dominio | Entidades imutáveis, regras, estado, histórico e políticas |
+| aplicacao | CadastroService, EstoqueService, ProjetoService, ConsultaService, Transacoes, contratos/eventos |
+| infraestrutura | SQLiteRepositorio, MemoriaRepositorio, codec JSON e demonstração |
+| interface | Janela, formulários e formatação Tkinter |
+| composicao.py | Liga dependências por construtor |
+| __main__.py | Configuração, entrada CLI e ciclo da sessão |
+
+Interface → Aplicação → Domínio. Infraestrutura implementa RepositorioEstado, contrato da aplicação. Domínio não importa UI/SQLite/aplicação/infraestrutura; teste AST verifica a restrição. Servicos é um conjunto explícito de dependências, sem busca global.
+
+## GRASP
+
+| Princípio | Decisão concreta |
+|---|---|
+| Information Expert | Material calcula disponível/custo/reserva; Projeto protege transições |
+| Creator | CadastroService dispõe dos dados para construir Chapa/Insumo; Projeto contém ItemProjeto |
+| Controller | Serviços coordenam intenções do operador, sem concentrar regras das entidades |
+| Low Coupling | Transacoes depende do contrato RepositorioEstado, substituível por memória |
+| High Cohesion | Cadastro, estoque, projetos, consultas e persistência têm responsáveis próprios |
+| Polymorphism / Protected Variations | Protocol para políticas/observadores; Material abstrato com Chapa/Insumo |
+| Pure Fabrication / Indirection | Transacoes/repositório isolam responsabilidades técnicas |
+
+## Strategy — reposição
+
+**Problema/contexto:** gestor decide comprar apenas a falta até o mínimo ou recompor até o alvo. **Solução:** PoliticaReposicao.sugerir é implementada por ReposicaoMinima e ReposicaoAlvo. **Participantes:** esses três tipos, ConsultaService.sugerir_compras e seletor da Janela. Serviço depende do contrato, sem condicional por nome da política.
+
+Disponível=60/mínimo=80/alvo=400 → mínima=20/alvo=340. Acima do mínimo, ambas zero. No limite, alerta permanece e mínima=0. **Custo:** classes adicionais para fórmulas pequenas, justificadas pela escolha funcional real. Teste injeta terceira política sem mudar serviço.
+
+## Observer — efeitos locais
+
+**Problema/contexto:** vários casos de uso precisam atualizar alertas/auditoria, sem repetir dependências concretas em cada serviço. **Solução:** PublicadorEventos mantém ObservadorEstoque; AlertaEstoqueObserver recalcula alertas e AuditoriaObserver acrescenta registro. **Participantes:** esses tipos, EventoDominio, Transacoes e composicao.montar.
+
+Notificação síncrona após alteração local e antes de salvar. Evento é fato local pendente de confirmação. Observadores só alteram snapshot isolado; falha descarta tentativa inteira. Não enviam e-mail/API. A ordem dos atuais não interfere, pois escrevem coleções diferentes. **Custo:** fluxo indireto e recálculo O(n). Efeitos externos futuros exigiriam pós-commit/outbox.
+
+## Injeção de dependências
+
+montar(repositorio, relogio, eventos) liga objetos por construtor. Testes usam memória e horário fixo; produção SQLite/UTC. Interface recebe Servicos e função de backup. Não se introduziu Singleton/Registry sem necessidade concreta. Strategy e Observer são os dois padrões centrais; DI sustenta testabilidade.
+
+## Decisões arquiteturais
+
+**ADR-001 — Python desktop:** Python 3.11+, Tkinter e biblioteca padrão permitem execução offline sem servidor/pacotes. Web/toolkit externo adicionariam dependências à demonstração local. `.pyz` exige Python/Tk, sem embutir interpretador. Tecnologia livre: enunciado p. 4.
+
+**ADR-002 — imutabilidade/transação:** dataclass(frozen=True) e tuplas protegem estado das entidades. Operações devolvem novas entidades por replace; EstadoEstoque as reúne. Transacoes carrega cópia, executa, publica, valida relações e salva uma vez. Python não fornece privacidade absoluta; contratos e fronteira de serviços preservam regras de uso.
+
+**ADR-003 — SQLite/snapshot:** tabela estado(id=1,revisao,conteudo) contém JSON versionado e decimais em texto, sem ORM/pickle. BEGIN IMMEDIATE, UPDATE condicionado à revisão e COMMIT confirmam o conjunto. Revisão antiga causa ConflitoDeVersao e exige nova decisão do usuário. Snapshot facilita unidade de consistência neste escopo; tabelas normalizadas seriam melhores para grandes volumes/consultas, com mapeamento adicional. Leitura/escrita O(tamanho da base), teto 32 MB, uso local. application_id, versão, quick_check e validação de relações recusam base inválida. Backup usa API SQLite e fecha explicitamente o destino. Revisão não transforma a interface em sistema colaborativo.
+
+**ADR-004 — precisão/histórico:** Decimal evita representação binária de float; média quatro casas HALF_UP e exibição monetária duas. Movimentos guardam ID e SKU/nome da época. Corrigir cadastro não reescreve histórico. Não se somam unidades diferentes.
+
+## Modelos
+
+Em uml/: casos de uso, domínio conceitual, classes de design, sequências de reserva/conclusão e estados do projeto. Conceitual contém apenas conceitos de negócio; design acrescenta serviços/contratos/adaptadores. Fontes PlantUML editáveis; SVG/PDF para leitura offline. Os vetores locais representam as mesmas relações/chamadas documentadas, sem serviço externo.
+</pre></article><article><pre># Testes e validação
+
+Execute `python scripts/verificar.py` ou `test.bat`. O relatório fica em build/resultados-testes.txt; falha retorna código diferente de zero. Para os sete testes gráficos: defina RUN_GUI_TESTS=1 em sessão com Tk/display. Sem a variável, esses sete aparecem como ignorados; isso não é evidência de sua execução.
+
+## Estratégia
+
+| Nível | Arquivos | O que verifica |
+|---|---|---|
+| Regras e colaboração | tests/test_regras.py | Sucesso/rejeição de RN01–12, precisão, estados, integralidade, Strategy/Observer |
+| Integração | tests/test_persistencia.py | SQLite real, reabertura, rollback, revisão concorrente, corrupção, backup, CLI e arquitetura |
+| Interface | tests/test_interface.py | Widgets/formulários/callbacks reais; mensagens substituídas para não bloquear |
+
+São 70 métodos de teste: 63 sem GUI e sete gráficos, com subcenários parametrizados por subTest. A evidência de entrega está em evidencias/testes.txt. Ambiente local: Windows e Python 3.14.2. O workflow prepara Windows/Linux e Python 3.11/3.14; não há evidência de CI remoto.
+
+## Sucesso e rejeição das regras críticas
+
+| Regra | Sucesso | Rejeição/limite |
+|---|---|---|
+| RN01 | Normalização/cadastro | SKU repetido ou obrigatório ausente |
+| RN02 | Chapas e frações de até três casas em unidades contínuas | Fração em UN/CHAPA, quarta casa, dimensão inválida, troca de unidade |
+| RN03 | Média ponderada e entrada | Quantidade/custo inválidos, referência vazia |
+| RN04 | Físico/reservado/disponível e valor | Entidade imutável e reservado maior que físico |
+| RN05 | Projeto com vários itens | Sem itens/nome/cliente, repetido, inexistente, não positivo ou fracionado |
+| RN06 | Reserva integral/edição planejada | Falta no último item, disputa por saldo, reserva/edição repetida |
+| RN07 | Consumo de vários itens | Conclusão sem reserva ou duplicada |
+| RN08 | Cancelar planejado/reservado | Cancelar ou reservar estados terminais |
+| RN09 | Ajustes positivo/negativo/zero | Abaixo da reserva, negativo, sem justificativa |
+| RN10 | Exclusão livre/edição preservando histórico | Saldo, movimento ou projeto impede exclusão |
+| RN11 | Políticas e remoção de alerta | Limites inválidos; alerta no mínimo com compra mínima zero |
+| RN12 | Commit conjunto | Observador falha, escrita falha, trigger SQLite aborta e cópia não vaza |
+
+O rollback real instala trigger que aborta UPDATE, tenta recebimento e compara o snapshot/revisão antes e depois, inclusive após reabrir. O conflito usa duas conexões e tenta gravar revisão antiga após um commit. Os testes de arquivo inválido verificam que o conteúdo não é substituído.
+
+## Verificação manual complementar
+
+Conferir em seu monitor: legibilidade com escala do Windows, barras horizontais, navegação entre abas, foco/seleção, fechar/cancelar formulários sem salvar, mensagens reais e diálogo de backup. Os testes gráficos automatizados não substituem acessibilidade e avaliação visual. Siga docs/07-apresentacao-e-demo.md com base nova e confirme os saldos indicados.
+
+## Limites
+
+Não se mediu capacidade/latência, não se testou queda física de energia e não se simulou ambiente multiusuário em rede. A atomicidade testada cobre falhas de aplicação/escrita e integridade transacional SQLite no escopo local. Testes de interface exercitam os callbacks reais e substituem apenas diálogos bloqueantes.
+</pre></article><article><pre># Rastreabilidade e entrega
+
+## Requisitos, código e teste
+
+| RF / UC | Implementação | Evidência |
+|---|---|---|
+| RF01–02 / UC01 | CadastroService; DadosMaterial; Material; EstadoEstoque | test_rn01*, test_rn02*, test_rn10*; formulário material |
+| RF03 / UC02 | EstoqueService.receber; Material.receber | test_rn03*; recebimento UI |
+| RF04 / UC03 | ConsultaService; Material.disponivel/valor_estoque | test_rn04*; pesquisa |
+| RF05 / UC04 | EstoqueService.contar; Material.contar | test_rn09*; inventário UI |
+| RF06 / UC05 | ProjetoService.criar/editar; Projeto; ItemProjeto | test_rn05*, test_rn06_planejado*; formulário projeto |
+| RF07 / UC06 | ProjetoService.reservar; Material.validar_reserva/reservar | test_rn06*; callbacks UI |
+| RF08 / UC07 | ProjetoService.concluir; Material.consumir_reserva | test_rn07*; callbacks UI |
+| RF09 / UC08 | ProjetoService.cancelar; Material.liberar | test_rn08* |
+| RF10 / UC09 | Movimentacao; AuditoriaObserver; Janela | test_rn07*, test_rn10_edicao*, test_rn12_commit* |
+| RF11 / UC10 | AlertaEstoqueObserver; Material.estoque_baixo | test_rn11* |
+| RF12 / UC10 | PoliticaReposicao; ConsultaService.sugerir_compras | test_rn11_strategy*; test_strategy*; seletor UI |
+
+RNF01/06: lançadores/testes/.pyz. RNF02: reabertura e falhas. RNF03: concorrência/revisão antiga. RNF04: widgets e roteiro manual. RNF05: AST do domínio. Nomes completos no relatório de testes.
+
+## Oito entregáveis do enunciado
+
+| Entregável / páginas | Artefato desta versão |
+|---|---|
+| 1 — problema/escopo, p. 8 | 01-visao-e-escopo.md e documento-tecnico.pdf |
+| 2 — RF/RNF/RN, p. 9 | 02-requisitos-e-regras.md: 12 RF, 6 RNF, 12 RN |
+| 3 — casos de uso, p. 10 | 03-casos-de-uso.md; dez UC; duas especificações detalhadas; UML 01 |
+| 4 — domínio, p. 12 | UML 02: conceitos e multiplicidades |
+| 5 — classes de design, p. 13 | UML 03: operações, contratos, serviços/adaptadores |
+| 6 — sequências, p. 14 | UML 04/05: reserva/conclusão, guardas e falhas |
+| 7 — design, p. 15–16 | 04-arquitetura-e-design.md; GRASP, Strategy, Observer, DI |
+| 8 — código/execução, p. 18 | Pacotes Python, scripts, Git, .pyz, base configurável e demo |
+
+O pacote final da p. 23 inclui documento técnico, UML, fonte/histórico, README, software e apresentação. O ZIP gerado por scripts/empacotar.py reúne esses itens e o manifesto SHA-256. O guia pessoal externo é excluído.
+
+## Coerência dos modelos
+
+Conceitos Material/Chapa/Insumo/Projeto/ItemProjeto/Movimentacao têm classes correspondentes. Projeto contém uma tupla com um ou mais itens; cada item referencia material por ID. Movimento referencia material e opcionalmente projeto por ID e guarda rótulos históricos. Contratos Protocol são implementados estruturalmente por SQLite/memória, políticas e observadores. Métodos das sequências correspondem a ProjetoService, Transacoes, entidades e repositório. Ciclo coincide com StatusProjeto.
+
+| Critério da p. 25 | Peso | Evidência |
+|---|---|---|
+| Análise e requisitos | 20% | Visão, regras, casos de uso e matriz |
+| Modelagem/design OO | 25% | UML, GRASP, padrões contextualizados e arquitetura |
+| Implementação funcional | 35% | UI, serviços, invariantes e SQLite |
+| Qualidade/testes | 10% | Suíte executável, relatório, organização e CI preparado |
+| Apresentação/demo | 10% | Slides e roteiro de dois fluxos centrais com rejeições |
+
+## Histórico e pendências humanas
+
+Git registra etapas reais desta reconstrução; autoria automatizada Codex. Não há histórico de semestre inventado, nem publicação remota. O bundle transporta os commits junto do ZIP. A apresentação oral é futura: os materiais estão preparados, e o estudante precisa preencher autoria em autoria.json, regenerar os documentos e ensaiar a defesa das decisões.
+</pre></article></html>
